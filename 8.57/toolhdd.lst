@@ -1,0 +1,59 @@
+﻿timeout 30
+default 5
+
+gfxmenu /Message
+configfile /RPK/tools.lst
+
+title 【 1 】运行 MAXDOS 9.0工具箱
+	map --mem /RPK/boot/MAXDOS.IMG (fd0)
+	map --hook
+	rootnoverify (fd0)
+	chainloader +1
+
+title 【 2 】运行 图形化分区工具
+	map --mem /RPK/tools/DM10.IMG (fd0)
+	map --hook
+	rootnoverify (fd0)
+	chainloader +1
+
+title 【 3 】运行 HDDReg硬盘修复
+	map --mem /RPK/tools/HDDREG.IMG (fd0)
+	map --hook
+	rootnoverify (fd0)
+	chainloader +1
+	
+title 【 4 】运行 MHDD硬盘检测
+	map --mem /RPK/tools/MHDD.IMG (fd0)
+	map --hook
+	rootnoverify (fd0)
+	chainloader +1
+
+title 【 5 】运行 Memtest内存诊断
+	map --mem /RPK/tools/MEMTEST.IMG (fd0)
+	map --hook
+	rootnoverify (fd0)
+	chainloader +1
+	
+title 【 6 】运行 CMOS 密码清除工具
+	map --mem /RPK/tools/CMOS.IMG (fd0)
+	map --hook
+	rootnoverify (fd0)
+	chainloader +1
+	
+title 【 7 】运行 Windows 登陆密码清除工具
+	map --mem /RPK/tools/PASSWORD.IMG (fd0)
+	map --hook
+	rootnoverify (fd0)
+	chainloader +1
+	
+title 【 8 】运行 Windows 登陆密码绕过工具
+	map --mem /RPK/tools/KONBOOT.IMG (fd0)
+	map --hook
+	rootnoverify (fd0)
+	chainloader +1
+	
+title 【 9 】运行 GHOST11.02
+	map --mem /RPK/tools/GHOST.IMG (fd0)
+	map --hook
+	rootnoverify (fd0)
+	chainloader +1
